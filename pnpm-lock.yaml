@@ -5,6 +5,7 @@ specifiers:
   '@testing-library/react': ^13.4.0
   '@testing-library/user-event': ^13.5.0
   autoprefixer: ^10.4.12
+  podcast-api: ^2.0.2
   postcss: ^8.4.18
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -16,6 +17,7 @@ dependencies:
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/user-event': 13.5.0
+  podcast-api: 2.0.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-scripts: 5.0.1_react@18.2.0+sass@1.55.0
@@ -3063,6 +3065,14 @@ packages:
   /axe-core/4.4.3:
     resolution: {integrity: sha512-32+ub6kkdhhWick/UjvEwRchgoetXqTK14INLqbGm5U2TzBkBNF3nQtLYm8ovxSkQWArjEQvftCKryjZaATu3w==}
     engines: {node: '>=4'}
+    dev: false
+
+  /axios/0.21.4:
+    resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
+    dependencies:
+      follow-redirects: 1.15.2
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   /axobject-query/2.2.0:
@@ -7092,6 +7102,15 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: 3.0.0
+    dev: false
+
+  /podcast-api/2.0.2:
+    resolution: {integrity: sha512-MKG/TxiQWezHBWxjBB/RGGP9IchsbLmTbEyhivI5SRIVKa/TMkDM1jr5FuRGVc5ovYFfTJlY5cYr2Xl92m572A==}
+    engines: {node: '>=10.*'}
+    dependencies:
+      axios: 0.21.4
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   /postcss-attribute-case-insensitive/5.0.2_postcss@8.4.18:
