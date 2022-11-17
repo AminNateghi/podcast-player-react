@@ -1,0 +1,36 @@
+.radioContainer {
+  @apply px-6 -mx-6 pt-4 flex flex-col justify-center border-t;
+
+  .cover {
+    @apply mt-8 mb-2 text-center flex flex-col items-center;
+
+    .radioImage {
+      @apply w-40 h-40 m-auto rounded-md object-cover;
+    }
+
+    .radioTitle {
+      @apply mt-4 text-base h-16 text-gray-600;
+    }
+
+    .radioDesc {
+      @apply text-gray-400;
+    }
+  }
+
+  .player {
+    @apply flex justify-center mb-3;
+
+    .button {
+      @apply flex items-center justify-center cursor-pointer w-16 h-16 rounded-full border;
+
+    }
+
+    .played {
+      @apply bg-gradient-to-r from-sky-600 to-cyan-400;
+    }
+    
+    .paused {
+      @apply bg-gradient-to-r from-sky-600 to-cyan-600;
+    }
+  }
+}
