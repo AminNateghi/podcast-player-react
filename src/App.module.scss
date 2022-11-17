@@ -1,0 +1,7 @@
+.appContainer {
+  @apply px-6 pt-6 2xl:container;
+
+  .contentGrid {
+    @apply flex flex-row flex-wrap gap-4;
+  }
+}
