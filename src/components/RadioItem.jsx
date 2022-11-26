@@ -21,5 +21,3 @@ export const RadioItem = ({ data, handleClick }) => {
     </div>
   )
 }
-
-

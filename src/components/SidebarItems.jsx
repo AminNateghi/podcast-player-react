@@ -9,7 +9,7 @@ export default class SidebarItems extends Component {
         <li>
           <a href="/" aria-label="dashboard" className="relative px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-sky-600 to-cyan-400">
             <IconDashboard />
-            <span className="-mr-1 font-medium">All Countries</span>
+            <span className="-mr-1 font-medium">Best Podcasts</span>
           </a>
         </li>
         <li>
