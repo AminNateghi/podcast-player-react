@@ -47,7 +47,7 @@ export const BestPodcast = () => {
 
   return (
     <>
-      <Header title="Best podcasts" showSearch={true} />
+      <Header title="Best podcasts" showSearch={ true } />
       {
         isLoading ? (
           <div>Loading...</div>
