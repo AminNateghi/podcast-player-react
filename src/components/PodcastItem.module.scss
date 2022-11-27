@@ -1,11 +1,11 @@
-.radioItemContainer {
+.podcastItemContainer {
   @apply w-60 h-80 cursor-pointer hover:border-red-600;
 
   .content {
     @apply h-full p-4 space-y-6 rounded-xl flex flex-col items-center border border-gray-200 bg-white;
     @apply hover:border-cyan-400;
 
-    .radioImage {
+    .podcastImage {
       @apply rounded-lg;
     }
   }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { PodcastItem } from '../components/PodcastItem';
 import { useLocation } from 'react-router-dom';
+import { EpisodeItem } from '../components/EpisodeItem';
 import { SEARCH_RESULT_ID, PODCAST_API_CLIENT, SEARCH_KEYWORD_ID } from '../constant/app.const';
 
 export const SearchResult = () => {
@@ -60,7 +60,7 @@ export const SearchResult = () => {
           <>
             {
               data?.map((item) => {
-                return <PodcastItem key={ item.id } data={ item } />
+                return <EpisodeItem key={ item.id } data={ item } />
               })
             }
           </>
