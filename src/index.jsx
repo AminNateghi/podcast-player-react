@@ -1,15 +1,14 @@
-import React, { Children } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
 } from "react-router-dom";
 import './index.scss';
 import { App } from './App';
 import { ErrorPage } from "./error-page";
 import { BestPodcast } from './pages/best-podcast';
-
+import { SearchResult } from './pages/search-result';
 
 const router = createBrowserRouter([
   {
@@ -22,9 +21,12 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <BestPodcast /> },
           {
-            index: true,
             path: 'best-podcast',
-            element: <BestPodcast />
+            element: <BestPodcast />,
+          },
+          {
+            path: 'search',
+            element: <SearchResult />,
           }
         ]
       }
