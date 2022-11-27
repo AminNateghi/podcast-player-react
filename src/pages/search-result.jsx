@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { EpisodeItem } from '../components/EpisodeItem';
+import { Header } from '../components/Header';
 import { SEARCH_RESULT_ID, PODCAST_API_CLIENT, SEARCH_KEYWORD_ID } from '../constant/app.const';
 
 export const SearchResult = () => {
@@ -53,6 +54,7 @@ export const SearchResult = () => {
 
   return (
     <>
+      <Header title="Search result" showSearch={ false } />
       {
         isLoading && !data ? (
           <div>Loading...</div>
