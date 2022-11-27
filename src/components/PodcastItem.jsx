@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './EpisodeItem.module.scss';
+import styles from './PodcastItem.module.scss';
 import IconDefaultCover from '../assets/images/default-cover.svg';
 
 export const PodcastItem = ({ data, handleClick }) => {
