@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from '../components/Header';
-import { RadioItem } from '../components/RadioItem';
+import { PodcastItem } from '../components/PodcastItem';
 import { BEST_PODCAST_ID, PODCAST_API_CLIENT } from '../constant/app.const';
 
 export const BestPodcast = () => {
@@ -55,7 +55,7 @@ export const BestPodcast = () => {
           <>
             {
               data?.map((item) => {
-                return <RadioItem key={ item.id } data={ item } handleClick={ handleSelectItem } />
+                return <PodcastItem key={ item.id } data={ item } handleClick={ handleSelectItem } />
               })
             }
           </>

@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './RadioItem.module.scss';
+import styles from './PodcastItem.module.scss';
 import IconDefaultCover from '../assets/images/default-cover.svg';
 
-export const RadioItem = ({ data, handleClick }) => {
+export const PodcastItem = ({ data, handleClick }) => {
   return (
     <div className={ styles.radioItemContainer } key={ data?.id }
       onClick={ event => handleClick(event, data) }>
