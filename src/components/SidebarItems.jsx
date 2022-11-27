@@ -2,29 +2,41 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import IconCategory from './icons/Category'
 import IconDashboard from './icons/Dashboard'
+import IconSearch from './icons/Search';
+import styles from './SidebarItems.module.scss';
 
 export default class SidebarItems extends Component {
   render() {
     return (
-      <ul className="space-y-2 tracking-wide mt-8">
+      <ul className={ styles.sidebarContainer }>
         <li>
-          <NavLink to={ "best-podcast" } aria-label="dashboard" className={ ({ isActive, IsPending }) =>
+          <NavLink to={ "best-podcast" } className={ ({ isActive }) =>
             isActive
-              ? "px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-sky-600 to-cyan-400"
-              : "px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group"
+              ? styles.active
+              : styles.normal
           }>
             <IconDashboard />
-            <span className="-mr-1 font-medium">Best Podcasts</span>
+            <span>Best Podcasts</span>
           </NavLink>
         </li>
         <li>
-          <NavLink to={ "category" } className={ ({ isActive, IsPending }) =>
+          <NavLink to={ "search" } className={ ({ isActive }) =>
             isActive
-            ? "px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-sky-600 to-cyan-400"
-            : "px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group"
+              ? styles.active
+              : styles.normal
+          }>
+            <IconSearch />
+            <span>Search</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to={ "category" } className={ ({ isActive }) =>
+            isActive
+              ? styles.active
+              : styles.normal
           }>
             <IconCategory />
-            <span className="group-hover:text-gray-700">Categories</span>
+            <span>Categories</span>
           </NavLink>
         </li>
       </ul>
