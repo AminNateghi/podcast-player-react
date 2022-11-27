@@ -1,25 +1,25 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import IconCategory from './icons/Category'
-import IconDashboard from './icons/Dashboard'
-import IconSearch from './icons/Search';
+import IconSearch from '../assets/images/magnifying-glass-svgrepo-com.svg';
+import IconStar from '../assets/images/star-svgrepo-com.svg';
+import IconCategory from '../assets/images/folder-svgrepo-com.svg';
 import styles from './SidebarItems.module.scss';
 
 export const SidebarItems = () => {
   const menus = [
     {
       title: 'Best Podcasts',
-      icon: <IconDashboard />,
+      icon: IconStar,
       link: 'best-podcast'
     },
     {
       title: 'Search',
-      icon: <IconSearch />,
+      icon: IconSearch,
       link: 'search'
     },
     {
       title: 'Categories',
-      icon: <IconCategory />,
+      icon: IconCategory,
       link: 'category'
     },
   ];
@@ -34,7 +34,7 @@ export const SidebarItems = () => {
                 ? styles.active
                 : styles.normal
             }>
-              { item.icon }
+              <img alt="" src={item.icon} />
               <span>{ item.title }</span>
             </NavLink>
           </li>

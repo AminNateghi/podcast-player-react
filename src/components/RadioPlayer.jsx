@@ -1,7 +1,7 @@
 import React from 'react';
-import IconDefaultCover from '../assets/images/default-cover.svg';
-import IconPause from './icons/Pause';
-import IconPlay from './icons/Play';
+import IconDefaultCover from './../assets/images/radio-svgrepo-com.svg';
+import IconPause from './../assets/images/pause-svgrepo-com.svg';
+import IconPlay from './../assets/images/play-svgrepo-com.svg';
 import styles from './RadioPlayer.module.scss';
 
 export const RadioPlayer = (props) => {
@@ -14,7 +14,7 @@ export const RadioPlayer = (props) => {
         {
           currentRadio?.thumbnail ?
             <img src={ currentRadio.thumbnail } alt="" className={ styles.radioImage } /> :
-            <img src={ IconDefaultCover } alt="" width="160" />
+            <img src={ IconDefaultCover } alt="" width="100" />
         }
         <div className={ styles.radioTitle }>{ currentRadio.title }</div>
         <span className={ styles.radioDesc }>{ currentRadio.desc }</span>
@@ -22,9 +22,9 @@ export const RadioPlayer = (props) => {
       <div className={ styles.player }>
         <div className={ `${ styles.button } ${ radioInPlay ? styles.played : styles.paused }` }>
           { radioInPlay ? (
-            <IconPlay />
-          ) : (
-            <IconPause />
+            <img alt="" src={IconPlay}  width="32"/>
+            ) : (
+            <img alt="" src={IconPause} width="32"/>
           ) }
         </div>
       </div>

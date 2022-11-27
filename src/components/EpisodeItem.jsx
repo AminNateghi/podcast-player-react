@@ -2,7 +2,7 @@ import React from 'react';
 import parse from 'html-react-parser';
 import DOMPurify from "dompurify";
 import styles from './EpisodeItem.module.scss';
-import IconDefaultCover from '../assets/images/default-cover.svg';
+import IconDefaultCover from '../assets/images/radio-svgrepo-com.svg';
 
 
 export const EpisodeItem = ({ data, handleClick }) => {

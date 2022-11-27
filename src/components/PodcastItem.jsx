@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './PodcastItem.module.scss';
-import IconDefaultCover from '../assets/images/default-cover.svg';
+import IconDefaultCover from '../assets/images/radio-svgrepo-com.svg';
 
 export const PodcastItem = ({ data, handleClick }) => {
   return (

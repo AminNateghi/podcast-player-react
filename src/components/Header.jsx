@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Header.module.scss';
-import IconMenu from './icons/Menu';
+import IconMenu from './../assets/images/menu-svgrepo-com.svg';
 import { InputSearch } from './InputSearch';
 
 export const Header = ({ title, showSearch, handleSearch }) => {
@@ -9,7 +9,7 @@ export const Header = ({ title, showSearch, handleSearch }) => {
       <div className={ styles.content }>
         <h5 hidden className={ styles.title }>{ title }</h5>
         <button className={ styles.deviceMenu }>
-          <IconMenu />
+          <img alt="" src={IconMenu} width="16" height="16" />
         </button>
         <div className="flex space-x-4">
           { showSearch
