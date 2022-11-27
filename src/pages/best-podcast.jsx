@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Header } from '../components/Header';
 import { RadioItem } from '../components/RadioItem';
 import { BEST_PODCAST_ID, PODCAST_API_CLIENT } from '../constant/app.const';
 
@@ -46,6 +47,7 @@ export const BestPodcast = () => {
 
   return (
     <>
+      <Header title="Best podcasts" showSearch={true} />
       {
         isLoading ? (
           <div>Loading...</div>
