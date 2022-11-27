@@ -4,4 +4,8 @@
   .contentGrid {
     @apply flex flex-row flex-wrap gap-4;
   }
+
+  .poweredBy{
+    @apply flex justify-end mt-3;
+  }
 }
