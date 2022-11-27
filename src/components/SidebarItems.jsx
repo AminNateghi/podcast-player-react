@@ -6,38 +6,40 @@ import IconSearch from './icons/Search';
 import styles from './SidebarItems.module.scss';
 
 export const SidebarItems = () => {
+  const menus = [
+    {
+      title: 'Best Podcasts',
+      icon: <IconDashboard />,
+      link: 'best-podcast'
+    },
+    {
+      title: 'Search',
+      icon: <IconSearch />,
+      link: 'search'
+    },
+    {
+      title: 'Categories',
+      icon: <IconCategory />,
+      link: 'category'
+    },
+  ];
+
   return (
     <ul className={ styles.sidebarContainer }>
-      <li>
-        <NavLink to={ "best-podcast" } className={ ({ isActive }) =>
-          isActive
-            ? styles.active
-            : styles.normal
-        }>
-          <IconDashboard />
-          <span>Best Podcasts</span>
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to={ "search" } className={ ({ isActive }) =>
-          isActive
-            ? styles.active
-            : styles.normal
-        }>
-          <IconSearch />
-          <span>Search</span>
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to={ "category" } className={ ({ isActive }) =>
-          isActive
-            ? styles.active
-            : styles.normal
-        }>
-          <IconCategory />
-          <span>Categories</span>
-        </NavLink>
-      </li>
+      { menus.map(item => {
+        return (
+          <li>
+            <NavLink to={ item.link } className={ ({ isActive }) =>
+              isActive
+                ? styles.active
+                : styles.normal
+            }>
+              { item.icon }
+              <span>{ item.title }</span>
+            </NavLink>
+          </li>
+        )
+      }) }
     </ul>
   )
 }

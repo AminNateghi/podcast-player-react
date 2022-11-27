@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import styles from './Sidebar.module.scss';
 import AppLogo from './AppLogo'
 import { RadioPlayer } from './RadioPlayer'
-import SidebarItems from './SidebarItems'
+import { SidebarItems } from './SidebarItems'
 
 export const Sidebar = (props) => {
 
