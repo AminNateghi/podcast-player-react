@@ -1,5 +1,5 @@
 .headerContainer {
-  @apply sticky z-10 top-0 h-16 border-b bg-white lg:py-2.5;
+  @apply sticky w-full z-10 top-0 h-16 bg-white lg:py-2.5;
 
   .content {
     @apply px-6 flex items-center justify-between space-x-4 2xl:container;
