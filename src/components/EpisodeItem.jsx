@@ -7,7 +7,7 @@ import IconDefaultCover from '../assets/images/radio-svgrepo-com.svg';
 
 export const EpisodeItem = ({ data, handleClick }) => {
   
-  const descHtml = DOMPurify.sanitize(data?.description_original, {
+  const descHtml = DOMPurify.sanitize(data?.description || data?.description_original, {
     USE_PROFILES: { html: true },
   });
 
@@ -23,7 +23,7 @@ export const EpisodeItem = ({ data, handleClick }) => {
           )
         }
         <div className={ styles.descContent }>
-          <span className={ styles.title }>{ data?.title_original }</span>
+          <span className={ styles.title }>{ data?.title || data?.title_original }</span>
           <span className={ styles.desc }>{ parse(descHtml) }</span>
         </div>
       </div>

@@ -1,0 +1,37 @@
+.podcastDetailsContainer {
+  @apply w-full;
+
+  .podcast {
+    @apply flex w-full content-center gap-x-4 justify-start;
+
+    .cover {
+      img {
+        @apply w-52 h-52;
+      }
+    }
+
+    .details {
+      @apply flex-1;
+
+      .title {
+        @apply mt-5 font-bold text-2xl;
+      }
+
+      .desc {
+        @apply text-slate-500;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    .extra {
+      @apply self-center text-right;
+    }
+  }
+
+  .episodes {
+    @apply mt-8 flex flex-row flex-wrap gap-4;
+  }
+}

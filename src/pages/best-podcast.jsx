@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { PodcastItem } from '../components/PodcastItem';
 import { BEST_PODCAST_ID, PODCAST_API_CLIENT } from '../constant/app.const';
 
 export const BestPodcast = () => {
+  const navigate = useNavigate();
   const [isLoading, setLoading] = useState(false);
   const [data, setData] = useState();
 
@@ -42,7 +44,7 @@ export const BestPodcast = () => {
 
   const handleSelectItem = (event, data) => {
     event.preventDefault();
-    // TODO: navigate to podcast details
+    navigate('/podcast', { state: { podcast: data } });
   }
 
   return (

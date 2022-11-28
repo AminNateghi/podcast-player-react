@@ -9,6 +9,7 @@ import { App } from './App';
 import { ErrorPage } from "./error-page";
 import { BestPodcast } from './pages/best-podcast';
 import { SearchResult } from './pages/search-result';
+import { PodcastDetails } from './pages/podcast-details';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
           {
             path: 'search',
             element: <SearchResult />,
-          }
+          },
+          {
+            path: 'podcast',
+            element: <PodcastDetails />,
+          },
         ]
       }
     ]
