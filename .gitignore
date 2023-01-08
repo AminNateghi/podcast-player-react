@@ -24,3 +24,5 @@ yarn-error.log*
 
 # package managers lock file
 pnpm-lock.yaml
+yarn.lock
+package-lock.json
