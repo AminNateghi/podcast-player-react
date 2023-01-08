@@ -10,6 +10,8 @@ import { ErrorPage } from "./error-page";
 import { BestPodcast } from './pages/best-podcast';
 import { SearchResult } from './pages/search-result';
 import { PodcastDetails } from './pages/podcast-details';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from './constant/query.const';
 
 const router = createBrowserRouter([
   {
@@ -41,5 +43,7 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={ router } />
+  <QueryClientProvider client={queryClient}>
+    <RouterProvider router={ router } />
+  </QueryClientProvider>
 );
